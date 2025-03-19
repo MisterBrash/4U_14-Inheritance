@@ -27,7 +27,7 @@ You will get a chance to practice _protection_, _inheritance_, and _super_ in th
   - It has a _protected_ member called `interest_rate` which defaults to `0.03`.
     - The `interest_rate` has both a `get` and a `set`
       - The `set` will validate the new interest rate such that it remains `0 < rate < 1`
-  - There is a _public_ method `apply_interest()` which will utilize the current `balance` to calculate an interest amount which is then added (debited) to the account _using the `debit()` method_.
+  - There is a _public_ method `apply_interest()` which will utilize the current `balance` to calculate an interest amount which is then added (credited) to the account _using the `credit()` method_.
 
 - `CheckingAccount`
   - The `nickname` defaults to "Classic Checking"
