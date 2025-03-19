@@ -76,10 +76,10 @@ class Fork extends Utensil {
   }
 }
 
-// Create a dirty fork
+// Create a dirty fork and print it out
 let dessert_fork = new Fork("wooden", false, 4, "dessert");
-console.log(dessert_fork.toString());
+console.log("\n", dessert_fork.toString());
 
-// Wash the fork.
+// Wash the fork and print again
 dessert_fork.wash();
-console.log(dessert_fork.toString());
+console.log("\n", dessert_fork.toString(), "\n");
