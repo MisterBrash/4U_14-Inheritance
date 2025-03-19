@@ -1,0 +1,25 @@
+
+{
+  "editor.minimap.enabled": false,
+  "workbench.editor.empty.hint": "hidden",
+  "git.autofetch": true,
+  "files.autoSave": "afterDelay",
+  "git.confirmSync": false,
+  "editor.autoClosingBrackets": "never",
+  "editor.autoClosingQuotes": "never",
+  "editor.wordWrap": "on",
+  "html.autoClosingTags": false,
+  "html.autoCreateQuotes": false,
+  "extensions.ignoreRecommendations": true,
+  "files.exclude": {
+      "LICENSE": true,
+      ".gitignore": true,
+      ".devcontainer/": true,
+      ".vscode/": true,
+      "Lessons/": true,
+      "assets/": true
+  },
+  "workbench.editorAssociations": {   
+      "*.md": "vscode.markdown.preview.editor"
+  }
+}
