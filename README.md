@@ -2,22 +2,29 @@
 
 ###### ICS4U - Mr. Brash 🐿
 
-Humans have legs and whales don't... But we both breathe air with lungs. We _inherit_ the trait "lungs" from the mammal _classification_.
+🧍‍♀️  🐳  
+Both humans and whales breathe air with lungs. However, humans have legs and whales have fins... 
 
-The same can be done with objects (classes) in OOP.
+Humans and whales _inherit_ the trait "lungs" from the mammal _classification_. We are similar in other ways as well - but we also _differ_ in many ways.
 
-- [Part 1 - Inheritance](#part-1---inheritance)
-- [Part 2 - Super!](#part-2---super-🦸🏻)
+Similarly, you have inheritted traits from your ancestors but you also have your own traits that make you unique.
+
+The same can be said about classes (objects) in OOP.
+
+- [1 - Inheritance](#part-1---inheritance)
+- [2 - Super!](#part-2---super-🦸🏻)
 - [Jump to the task](./PRACTICE.md)
 
 
 # Part 1 - Inheritance
 
-Protection is very important. It is a cornerstone of OOP. But what if we end up with multiple Classes that contain similar code?
+What if you end up with multiple Classes that contain _similar_ code?
 
 ---
 
-When _designing_ an object, you might realize that it requires some or all of the same code as another object you already declared. An important idiom of programming is **DRY** - **D**on't **R**epeat **Y**ourself. If you can reuse part of another object, you might want to do so.
+When _designing_ an object, you might realize that it requires some or all of the same code as another object you already declared. Like chess pieces for a chess game or geometrical shapes for a graphing program.
+
+An important idiom of programming is **DRY** - **D**on't **R**epeat **Y**ourself. If you can reuse part of another object, you might want to do so.
 
 Let's use real life **animals** as an example:
 
@@ -53,9 +60,9 @@ class Dog extends Animal {
   has_fleas = false;
 
   constructor(name, fleas) {
-    this.legs = 4;      // We still have a "legs" attribute
     this.name = name;
     this.has_fleas = fleas;
+    this.legs = 4;    // We still have a "legs" property
   }
 
   // Override the speak() function
@@ -65,7 +72,7 @@ class Dog extends Animal {
 }
 ```
 
-🤔 Should the number `legs` be public (editable)? (more on that later)
+🤔 Shouldn't the number `legs` be protected (read-only)? (more on that in a bit)
 
 ### Notice the keyword `extends` on the `Dog` class.
 This means the `Dog` class will _inherit_ everything already created inside the `Animal` class. We can choose to keep it all or overwrite some of it - like overwriting the `speak()` method.
@@ -85,10 +92,10 @@ anim.name       // undefined
 doggo.name      // "Spot"
 ```
 
-### ❔Question:
-Can you think of some `subclasses` that would inherit from and _extend_ the `Vehicle` class you created last class?
+#### ❔Question:
+Can you think of some traits that all chess pieces would have but also some ways in which they are unique?
 
-<br><br>
+<br>
 
 # Part 2 - Super! 🦸🏻
 
@@ -115,10 +122,13 @@ class Animal {
 }
 ```
 
-But that creates a new problem (because of course it does). The `Dog` class, which extends `Animal` can no longer _modify_ the `legs` variable! It's _**protected**_.
+But that creates a new problem (because of course it does). The `Dog` class, which extends `Animal` can no longer _modify_ the `legs` variable! It is now _**protected**_ because of the `#`.
 
-🦸🏻 In order to set the legs during instantiation, we need to call the _constructor_ of the **Superclass**. The keyword `super` allows us to utilize methods of the parent class.
+⚠ In order to set the value of `legs` during instantiation, we need to be able to call the _constructor_ of the **Superclass**.
 
+#### 🦸🏻 The keyword `super` allows us to utilize methods of the parent class.
+
+Let's take another look at the `Dog` class:  
 ```JS
 // The subclass (child) of Animal
 class Dog extends Animal {
