@@ -1,14 +1,14 @@
-# Your Task (2.8 - Inheritance)
+# 14 - Inheritance (Practice/CLasswork)
 
 ###### ICS4U - Mr. Brash 🐿️
 
-  - [Jump back to the lesson](README.md)
+  - [Jump back to the lesson](./README.md)
 
 You will get a chance to practice _protection_, _inheritance_, and _super_ in this task.
 
 ### Let's roll with the bank account example...
 
-![Bank account Class diagram](assets/bank.png)
+![Bank account Class diagram](./assets/bank.png)
 
 #### A basic `BankAccount` is pretty simple
   - we can give it a `nickname`, which should be read/write (account holders can rename their accounts).
