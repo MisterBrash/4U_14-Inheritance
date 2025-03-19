@@ -8,7 +8,7 @@ The same can be done with objects (classes) in OOP.
 
 - [Part 1 - Inheritance](#part-1---inheritance)
 - [Part 2 - Super!](#part-2---super-🦸🏻)
-- [Jump to the task](TASK.md)
+- [Jump to the task](./PRACTICE.md)
 
 
 # Part 1 - Inheritance
@@ -21,12 +21,12 @@ When _designing_ an object, you might realize that it requires some or all of th
 
 Let's use real life **animals** as an example:
 
-![](assets/inheritance_small.png)
+![](./assets/inheritance_small.png)
 
 All of the animals listed above have ears. They eat. They make noise. They are warm-blooded. But they are different - they make _different_ noises, they eat different foods. They may or may not have fur. What if we included a bird or human?
 
 When declaring classes for these "objects", we might use the following:
-![animals](assets/animals.png)
+![animals](./assets/animals.png)
 
 Notice the arrows from each `subclass` to the `Animal` `superclass`? This means "Dog comes from Animal", etc. All three subclasses have the traits of `Animal`.
 
@@ -178,7 +178,9 @@ Each account type could _inherit_ from a parent `Account` class and utilize the 
 
 ### Any Questions?
 
-If not - [head to your task for the day](TASK.md).
+If not - [head to the practice (classwork) for the day](./PRACTICE.md).
+
+<br><br>
 
 <br>
 <br>
