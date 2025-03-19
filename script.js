@@ -1,8 +1,9 @@
 /**
- * ICS4U - Mr. Brash
+ * ICS4U - Mr. Brash  🐿️
+ * 
  * Inheritance & Super!  🦸🏻
  * 
- * Make sure you read the README file!
+ * Make sure you read the README file.
  * 
  * Author: 
  */
