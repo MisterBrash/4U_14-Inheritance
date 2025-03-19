@@ -1,8 +1,8 @@
-# 2.8 - Inheritance
+# 14 - Inheritance (Lesson)
 
 ###### ICS4U - Mr. Brash 🐿
 
-But humans have legs and whales don't... But we both breathe air with lungs. We _inherit_ the trait "lungs" from the mammal _classification_.<br>
+Humans have legs and whales don't... But we both breathe air with lungs. We _inherit_ the trait "lungs" from the mammal _classification_.<br>
 The same can be done with objects (classes) in OOP.
 
 - [Part 1 - Inheritance](#part-1---inheritance)
