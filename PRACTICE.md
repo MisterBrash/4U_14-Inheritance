@@ -2,11 +2,11 @@
 
 ###### ICS4U - Mr. Brash 🐿️
 
-  - [Jump back to the lesson](./README.md)
+🔙 [to the lesson](./README.md)
 
-You will get a chance to practice _protection_, _inheritance_, and _super_ in this task.
+You will get a chance to practice _protection_, _inheritance_, and _super_ in this practice work.
 
-### Let's roll with the bank account example...
+### Let's look at a bank account...
 
 ![Bank account Class diagram](./assets/bank.png)
 
@@ -18,25 +18,25 @@ You will get a chance to practice _protection_, _inheritance_, and _super_ in th
   - Bank accounts have two basic public methods:
     - `debit(amt)` which _removes_ money from the account (if the `amt` is a positive number and there's enough in the `balance`) and _returns_ whether the transaction was successful.
     - `credit(amt)` which _adds_ to the account (if the `amt` is positive) and _returns_ whether it was successful.
-    - **Note:** The balance should _always_ be to the nearest _penny_ (two decimals) after every transaction.
+    - **Note:** The balance should _always_ be rounded to the nearest _penny_ (two decimals) after every transaction. The `round()` function is in the [library](./library.js) file.
 
 #### There are two subclasses (children)
 - `SavingsAccount`
-  - The nickname defaults to "Basic Savings"
-  - The type is "Savings Account"
-  - It has a _protected_ member called `interest_rate` which defaults to 0.03.
+  - The `nickname` defaults to "Basic Savings"
+  - The `type` is "Savings Account"
+  - It has a _protected_ member called `interest_rate` which defaults to `0.03`.
     - The `interest_rate` has both a `get` and a `set`
-      - The `set` will make sure the new interest rate being set is above 0 and below 1
-  - It has a _public_ method `apply_interest()` which will utilize the `balance` to calculate an interest amount which is added (debited) to the account.
+      - The `set` will validate the new interest rate such that it remains `0 < rate < 1`
+  - There is a _public_ method `apply_interest()` which will utilize the current `balance` to calculate an interest amount which is then added (debited) to the account _using the `debit()` method_.
 
 - `CheckingAccount`
-  - The nickname defaults to "Classic Checking"
-  - The type is "Checking Account"
-  - It has a _protected_ `transaction_fee` (in dollars) that defaults to $0.50. 
-    - This fee is applied to _every_ transanction on the account.
+  - The `nickname` defaults to "Classic Checking"
+  - The `type` is "Checking Account"
+  - It has a _protected_ `transaction_fee` (in dollars) that defaults to `0.50` (50 cents). 
+    - This fee is applied to _every_ transanction on the account, whether it's a `debit()` or `credit()`.
     - The `transaction_fee` has both a `get` and a `set`
       - The `set` ensures the fee is never below $0.01 or above $2.00
-  - It has two _public_ methods `debit()` and `credit()` which utilize the superclass's methods _and_ adds a transaction fee (removed from the balance of the account). Remember - the transaction is only successful if there is enough money in the account for the debit _and_ the transaction fee.
+  - It has two _public_ methods `debit()` and `credit()` which utilize the superclass's methods _and_ adds the transaction fee (removed from the balance of the account). Remember - the transaction is only successful if there is enough money in the account for the debit _and_ the transaction fee.
 
 ### Test your code _thoroughly_!  
   - Can you modify the balance of a `SavingsAccount` on your own?
@@ -54,4 +54,4 @@ You will get a chance to practice _protection_, _inheritance_, and _super_ in th
     - **Note:** the `CheckingAccount` will need to override this method to add the transaction fee.
     - Accounts of type `SavingsAccount` do not incur a fee, no need to override the method.
 
-<br><br>🐿️
+<br>🐿️

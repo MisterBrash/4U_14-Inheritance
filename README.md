@@ -176,12 +176,13 @@ Similarly, some accounts charge for money conversions, transactions from cash ma
 
 Each account type could _inherit_ from a parent `Account` class and utilize the parent `super.debit()` and `super.credit()` methods but modify the balance during the transaction.
 
+#### There is an example of inheritance and the use of `super` in the [example.js](./example.js) file.
+
+
 ### Any Questions?
 
 If not - [head to the practice (classwork) for the day](./PRACTICE.md).
 
-<br><br>
+<br>
 
-<br>
-<br>
 🐿️
